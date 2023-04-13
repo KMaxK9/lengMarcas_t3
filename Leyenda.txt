@@ -4,7 +4,7 @@ Los "nombres" deberian ser informativos para saber que se ha hecho en el proyect
 
 "C-x.x nombre"		//C-1.0 Diagrama Tienda.	Creación Proyect.(Cuando creamos un proyecto Nuevo).	
 "U-x.x nombre"	  	//U-1.2 Entidades.		Update Proyect.  (Cuando actualizamos un proyecto existente).
-"S-x.x.x nombre"	//S-4.2.1 Entidades/Productos.	Snapshot Proyect. (Cuando estás probando cosas nuevas por encima de un Update).
+"U-x.x.x nombre"	//U-4.2.1 Entidades/Productos.	Snapshot Proyect. (Cuando estás probando cosas nuevas por encima de un Update).
 "R-x.x nombre"		//R-2.0 Diagrama Tienda.	Release Proyect. (Publicación de la nueva versión / Solo cuando se termina el proyecto o se tiene que entregar).
 "E-x nombre-n2"		//E-1 Curriculum-General	Edit Proyect. (Cuando cambias el directorio de algunos archivos, moviendolos de carpeta).
 
