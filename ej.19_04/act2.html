@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2</title>
+    <style>
+        div {
+            background-color: rgb(231, 231, 231);
+            width: fit-content;
+            border: solid;
+        }
+    </style>
+</head>
+
+<body>
+    
+   <div>
+    <script>
+    filas = 3; // número de columnas.
+    document.open();
+
+    for (i = 0; i < filas; i++) {
+        for (j = 0; j + i < 40 - i; j++) {
+            document.write('&nbsp');
+        } // for 
+        for (k = 0; k - i < i + 1; k++) {
+            /*if (i = 0 && i < k) {
+                document.write("*");
+            } else {
+                document.write("0");
+            } // if / else
+            */
+           docuemnt.write("0");
+        } // for
+        for (j = 0; j + i < 40 - i; j++) {
+            document.write('&nbsp');
+        } // for 
+        document.write("</br>");
+    } // for
+
+    document.close();
+</script>
+    </div>
+    <p>Pirámide centrada en un contenedor de aprox 80 "columnas" (espacios) de ancho.</p>
+</body>
+
+</html>
