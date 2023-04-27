@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA-TE-TI</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <div id="pantalla">
+        <div id="contenedor">
+            <div class="fila" id="fila1">
+                <div class="cuadrito" id="c1" onmouseenter="enter('c1')" onmouseleave="leave('c1')"
+                    onclick="markCircle('c1',0,0)" ondblclick="markSquare('c1',0,0)">
+                    <p></p>
+                </div>
+                <div class="cuadrito" id="c2" onmouseenter="enter('c2')" onmouseleave="leave('c2')"
+                    onclick="markCircle('c2',0,1)" ondblclick="markSquare('c2',0,1)"></div>
+                <div class="cuadrito" id="c3" onmouseenter="enter('c3')" onmouseleave="leave('c3')"
+                    onclick="markCircle('c3',0,2)" ondblclick="markSquare('c3',0,2)"></div>
+            </div>
+            <div class="fila" id="fila2">
+                <div class="cuadrito" id="c4" onmouseenter="enter('c4')" onmouseleave="leave('c4')"
+                    onclick="markCircle('c4',1,0)" ondblclick="markSquare('c4',1,0)"></div>
+                <div class="cuadrito" id="c5" onmouseenter="enter('c5')" onmouseleave="leave('c5')"
+                    onclick="markCircle('c5',1,1)" ondblclick="markSquare('c5',1,1)"></div>
+                <div class="cuadrito" id="c6" onmouseenter="enter('c6')" onmouseleave="leave('c6')"
+                    onclick="markCircle('c6',1,2)" ondblclick="markSquare('c6',1,2)"></div>
+            </div>
+            <div class="fila" id="fila3">
+                <div class="cuadrito" id="c7" onmouseenter="enter('c7')" onmouseleave="leave('c7')"
+                    onclick="markCircle('c7',2,0)" ondblclick="markSquare('c7',2,0)"></div>
+                <div class="cuadrito" id="c8" onmouseenter="enter('c8')" onmouseleave="leave('c8')"
+                    onclick="markCircle('c8',2,1)" ondblclick="markSquare('c8',2,1)"></div>
+                <div class="cuadrito" id="c9" onmouseenter="enter('c9')" onmouseleave="leave('c9')"
+                    onclick="markCircle('c9',2,2)" ondblclick="markSquare('c9',2,2)"></div>
+            </div>
+        </div> <!--contenedor-->
+    </div> <!--pantalla-->
+
+    <script src="dynamic.js"></script>
+
+</body>
+
+</html>
