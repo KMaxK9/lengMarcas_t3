@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA-TE-TI</title>
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+
+<body>
+    <div id="pantalla">
+        <h1>TA - TE - TI</h1>
+        <div id="contenedor">
+            <div class="fila" id="fila1">
+                <div class="cuadrito" id="c1" onmouseenter="enter('c1')" onmouseleave="leave('c1')"
+                    onclick="mark('c1')"></div>
+                <div class="cuadrito" id="c2" onmouseenter="enter('c2')" onmouseleave="leave('c2')"
+                    onclick="mark('c2')"></div>
+                <div class="cuadrito" id="c3" onmouseenter="enter('c3')" onmouseleave="leave('c3')"
+                    onclick="mark('c3')"></div>
+            </div>
+            <div class="fila" id="fila2">
+                <div class="cuadrito" id="c4" onmouseenter="enter('c4')" onmouseleave="leave('c4')"
+                    onclick="mark('c4')"></div>
+                <div class="cuadrito" id="c5" onmouseenter="enter('c5')" onmouseleave="leave('c5')"
+                    onclick="mark('c5')"></div>
+                <div class="cuadrito" id="c6" onmouseenter="enter('c6')" onmouseleave="leave('c6')"
+                    onclick="mark('c6')"></div>
+            </div>
+            <div class="fila" id="fila3">
+                <div class="cuadrito" id="c7" onmouseenter="enter('c7')" onmouseleave="leave('c7')"
+                    onclick="mark('c7')"></div>
+                <div class="cuadrito" id="c8" onmouseenter="enter('c8')" onmouseleave="leave('c8')"
+                    onclick="mark('c8')"></div>
+                <div class="cuadrito" id="c9" onmouseenter="enter('c9')" onmouseleave="leave('c9')"
+                    onclick="mark('c9')"></div>
+            </div>
+        </div> <!--contenedor-->
+        <h2 id="ganador"></h2>
+    </div> <!--pantalla-->
+
+    <script src="dynamic.js"></script>
+
+</body>
+
+</html>

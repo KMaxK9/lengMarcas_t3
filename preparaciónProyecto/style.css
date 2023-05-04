@@ -4,24 +4,32 @@
     box-sizing: border-box;
 }
 
-div {
-    display: flex;
-    background-color: green;
-}
-
 p {
     color: white;
+    font-size: xx-large;
 }
 
-a {
+a { 
     text-decoration: none;
+    justify-content: center;
 }
 
 .button {
+    display:flex;
     height: 15vh;
     width: 15vw;
     align-items: center;
     justify-content: center;
+
+    background-color: lightcoral;
+    border: solid;
+    border-radius: 1.7vw;
+    border-color: white;
+    margin: 2vh 0.5vw 2vh;
+}
+
+.button:hover {
+    cursor: pointer;
 }
 
 #banner {
@@ -30,6 +38,5 @@ a {
     height: 20%;
     align-items: center;
     justify-content: center;
-    background-color: red;
-
+    background-color:rgb(65, 65, 65);
 }
