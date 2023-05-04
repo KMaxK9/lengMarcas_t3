@@ -14,6 +14,7 @@ body {
     width: 100vw;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #contenedor {
@@ -24,7 +25,7 @@ body {
     justify-content: space-between;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: lightcyan;
     border-style: solid;
 }
 
@@ -36,10 +37,25 @@ body {
 
 .cuadrito {
     display: flex;
-    height: 20vh;
-    width: 20vw;
+    aspect-ratio: 1 / 1;
+    width: 12vw;
     justify-content: center;
     align-items: center;
     margin: 2%;
     border-style: solid;
+}
+
+@media screen and (orientation:portrait) {
+
+    body {
+        background-color: darkslategrey;
+    }
+
+    h1 {
+        color:white;
+    }
+
+    .cuadrito {
+        width: 20vw;
+    }
 }
