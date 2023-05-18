@@ -20,16 +20,11 @@ bdark.addEventListener('click', e => {
     body.classList.toggle('darkmode');
     let value = body.classList.contains('darkmode');
     store(value);
-
     if (!value) {
-        let iconoDia = document.getElementById("dia").style.display = "block";
-        let iconoNoche = document.getElementById("noche").style.display = "none";
-        console.log("dia");
+        setLightMode();
     } else if (value) {
-        let iconoDia = document.getElementById("dia").style.display = "none";
-        let iconoNoche = document.getElementById("noche").style.display = "block";
-        console.log("noche");
-    }
+        setDarkmode();
+    } // if / else
 })
 
 /**
@@ -41,11 +36,9 @@ function load() {
         store('false');
     } else if (darkmode == 'true') {
         body.classList.add('darkmode');
-        let iconoDia = document.getElementById("dia").style.display = "none";
-        let iconoNoche = document.getElementById("noche").style.display = "block";
+        setDarkmode();
     } else if (darkmode) {
-        let iconoDia = document.getElementById("dia").style.display = "block";
-        let iconoNoche = document.getElementById("noche").style.display = "none";
+        setLightMode();
     } // if / else
 }
 
@@ -55,5 +48,27 @@ function load() {
  */
 function store(value) {
     localStorage.setItem('darkmode', value);
+}
+
+/**
+ * Funtion that changes to Light mode. (changes image).
+ */
+function setLightMode() {
+    let iconoDia = document.getElementById("day").style.display = "block";
+    let iconoNoche = document.getElementById("night").style.display = "none";
+    document.getElementById("imgDay").style.display = "flex";
+    document.getElementById("imgNight").style.display = "none";
+    console.log("day");
+}
+
+/**
+ * Funtion that changes to Dark mode. (changes image).
+ */
+function setDarkmode() {
+    let iconoDia = document.getElementById("day").style.display = "none";
+    let iconoNoche = document.getElementById("night").style.display = "block";
+    document.getElementById("imgDay").style.display = "none";
+    document.getElementById("imgNight").style.display = "flex";
+    console.log("night");
 }
 
