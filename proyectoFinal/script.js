@@ -13,6 +13,9 @@ const body = document.querySelector('body');
 
 load();
 
+/**
+ * EventListener for when clicked the element.
+ */
 bdark.addEventListener('click', e => {
     body.classList.toggle('darkmode');
     let value = body.classList.contains('darkmode');
@@ -29,6 +32,9 @@ bdark.addEventListener('click', e => {
     }
 })
 
+/**
+ * Function that loads when the page is refreshed or entered.
+ */
 function load() {
     const darkmode = localStorage.getItem('darkmode');
     if (!darkmode) {
@@ -43,6 +49,10 @@ function load() {
     } // if / else
 }
 
+/**
+ * Funtion that stores the value (boolean) of "darkmode" in localStorage.
+ * @param {*} value Boolean value of "darkmode".
+ */
 function store(value) {
     localStorage.setItem('darkmode', value);
 }
