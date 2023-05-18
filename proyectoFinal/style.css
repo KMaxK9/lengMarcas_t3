@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body.darkmode {
+    background-color: #202020;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    justify-content: center;
+    
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 9vh;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(66, 66, 66);
+}
+
+footer p {
+    color: white;
+}
+
+.footerContainer {
+    flex-direction: column;
+}
+
+.button {
+    display: flex;
+    background-color: green;
+    padding: 2vh 3vw;
+    margin: 0 4vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7vw;
+    cursor: url("./images/pala.png") 0 0,
+           pointer;
+}
+
+.button p {
+    color: white;
+}
+
+.dayNight {
+    height: 4.5vh;
+}
+
+#bdark {
+    width: 5vw;
+    padding: 1vh 2vw;
+    margin: 0 4vw;
+}
+
+#banner {
+    display: flex;
+    width: 100%;
+    height: 9vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: rgb(66, 66, 66);
+    position: sticky;
+    top: 0%;
+}
+
+#bannerPic {
+    display: flex;
+    width: 100%;
+    height: 35vh;
+    align-items: center;
+    justify-content: center;
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+
+#main {
+    margin: 5% 2%;
+}
+
+@media screen and (orientation: portrait) {
+
+    .button {
+        padding: 2vh 3vw;
+        margin: 0 2vw;
+    }
+
+    #banner {
+        height: 10vh;
+    }
+
+    #bannerPic {
+        object-fit: cover;
+        height: 25vh;
+    }
+
+    .dayNight {
+        height: 4vh;
+    }
+
+    #bdark {
+        width: 8vw;
+        padding: 0.9vh 2vw;
+        margin: 0 4vw;
+    }
+
+}
