@@ -1,42 +1,62 @@
+/* CSS CLASS */
+
+/* Affects everything */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body in darkmode */
 body.darkmode {
     background-color: #202020;
     color: white;
 }
 
-a {
-    text-decoration: none;
-    justify-content: center;
-    
+/* main element in page */
+main {
+    text-align: center;
+    margin: 2vh 2vw;
 }
 
+/* a element */
+a {
+    text-decoration: none;
+    justify-content: center; 
+    color: white;
+}
+/* a when have been visited */
+a :visited {
+    color:white;
+}
+
+/* Footer element */
 footer {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 9vh;
+    height: 10vh;
     align-items: center;
     justify-content: center;
     background-color: rgb(66, 66, 66);
+    
 }
-
+/* All p in footer element */
 footer p {
     color: white;
+    text-align: center;
 }
-
+/* containers in footer element */
 .footerContainer {
     flex-direction: column;
+    padding: 1vh 1vw;
 }
 
+/* Button class from the #banner */
 .button {
     display: flex;
     background-color: green;
-    padding: 2vh 3vw;
+    padding: 1.5vh 2.5vw;
     margin: 0 4vw;
     align-items: center;
     justify-content: center;
@@ -44,25 +64,28 @@ footer p {
     cursor: url("./images/pala.png") 0 0,
            pointer;
 }
-
+/* All p in button class */
 .button p {
     color: white;
 }
 
+/* Class: Picture from darkmode toggle */
 .dayNight {
-    height: 4.5vh;
+    height: 3.5vh;
 }
 
+/* ID from the button for darkmode toggle */
 #bdark {
-    width: 5vw;
+    width: 4vw;
     padding: 1vh 2vw;
     margin: 0 4vw;
 }
 
+/* ID from Banner Menu */
 #banner {
     display: flex;
     width: 100%;
-    height: 9vh;
+    height: 7vh;
     align-items: center;
     justify-content: center;
     flex-direction: row;
@@ -70,30 +93,28 @@ footer p {
     position: sticky;
     top: 0%;
 }
-
+/* Picture above banner */
 #bannerPic {
     display: flex;
     width: 100%;
-    height: 35vh;
+    height: 50vh;
     align-items: center;
     justify-content: center;
     object-fit: cover;
-    object-position: 50% 40%;
+    object-position: 50% 45%;
 }
 
-#main {
-    margin: 5% 2%;
-}
-
+/* When using phone or tablet in portrait mode */
 @media screen and (orientation: portrait) {
 
     .button {
-        padding: 2vh 3vw;
+        padding: 1vh 2vw;
         margin: 0 2vw;
+        border-radius: 1vw;
     }
 
     #banner {
-        height: 10vh;
+        height: 7vh;
     }
 
     #bannerPic {
@@ -102,12 +123,12 @@ footer p {
     }
 
     .dayNight {
-        height: 4vh;
+        height: 2.8vh;
     }
 
     #bdark {
         width: 8vw;
-        padding: 0.9vh 2vw;
+        padding: 0.5vh 1.5vw;
         margin: 0 4vw;
     }
 
