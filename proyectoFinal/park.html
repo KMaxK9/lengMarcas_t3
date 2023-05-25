@@ -10,6 +10,98 @@
 </head>
 
 <body>
-    
+    <!-- Banner Image -->
+    <div id="imgContainer">
+        <img src="./images/main.jpg" id="imgDay" class="bannerImg">
+        <img src="./images/mainRainy.jpg" id="imgNight" class="bannerImg" style="display:none">
+        <h1 id="title">DirtScavengers BikePark</h1>
+    </div>
+    <!-- Banner Menu -->
+    <header id="banner" class="stripps">
+        <a class="button" href="./index.html">
+            <p>HOME</p>
+        </a>
+        <a class="button" href="./park.html">
+            <p>PARK</p>
+        </a>
+        <a class="button" href="#">
+            <p>SHOP</p>
+        </a>
+        <div class="button" id="infBtn">
+            <img class="buttonImg" src="./images/info.png">
+        </div>
+        <div class="button" id="optBtn">
+            <img class="buttonImg" src="./images/gears.png">
+        </div>
+    </header>
 
+    <!-- Modal -->
+    <div id="infModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <div class="container">
+                <h2>Modal</h2>
+                </br>
+                <p>Jesssyl Maximilian Kögler.<br>1º DAM.<br>Tema: Parque Bicicleta + Merch Shop.</p>
+            </br>
+            <p>El archivo XML se encuentra en el footer</p>
+            </div>
+            <div class="container">
+                <div id="infClose" class="button" class="close">
+                    <p>OK</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="optModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <div class="container">
+                <h2> Options Panel</h2>
+                </br>
+                <p>You can change the appereance of the web site here.</p>
+            </div>
+            <div class="container">
+                <p>Change to Light or Darkmode:</p>
+                </br>
+                <div id="bdark" class="button">
+                    <img id="day" class="dayNight" src="./images/dia.png">
+                    <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+                </div>
+            </div>
+            <div class="container">
+                <p>Usuario:&nbsp;</p>
+                <input id="userImput" type="text" placeholder="Write your name">
+            </div>
+            <div id="optClose" class="button" class="close">
+                <p>Save changes</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="user">
+        <p id="userName"></p>
+    </div>  
+    <!-- Footer -->
+    <footer class="stripps">
+        <div class="footerContainer">
+            <p>Page created by: Jessyl Maximilian Kögler</p>
+            <p>In Cooperation with: DirtScavengers</p>
+        </div>
+        <div class="footerContainer">
+            <a target="_blank" href="https://www.instagram.com/dirt_scavengers/?hl=com"
+                style="color:magenta">Instagram</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCftvCYOq2TvZc4959ns0SmA"
+                style="color:red">Youtube</a>
+        </div>
+        <div class="footerContainer">
+            <a target="_blank" href="https://kmaxk9.github.io/Publico_GH/General/ejercicio_xml/london.xml">XML</a>
+        </div>
+
+    </footer>
+    <!-- Javascript -->
+    <script src="./script.js"></script>
 </body>

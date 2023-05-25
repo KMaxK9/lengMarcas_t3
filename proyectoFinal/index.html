@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DirtScavengers</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./label.css">
 </head>
 
 <body>
@@ -39,22 +40,41 @@
     <div id="infModal" class="modal">
         <!-- Modal content -->
         <div class="modalContent">
-            <h2>Modal</h2>
-            <p>Jesssyl Maximilian Kögler.\n1º DAM.\nTema: Parque Bicicleta + Merch Shop.</p>
-            <div id="infClose" class="button" class="close">
-                <p>Save changes</p>
+            <div class="container">
+                <h2>Modal</h2>
+                </br>
+                <p>Jesssyl Maximilian Kögler.<br>1º DAM.<br>Tema: Parque Bicicleta + Merch Shop.</p>
+            </br>
+            <p>El archivo XML se encuentra en el footer</p>
+            </div>
+            <div class="container">
+                <div id="infClose" class="button" class="close">
+                    <p>OK</p>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Modal -->
     <div id="optModal" class="modal">
         <!-- Modal content -->
         <div class="modalContent">
-            <h2> Options Panel</h2>
-            <p>You can change the appereance of the web site here.</p>
-            <div id="bdark" class="button">
-                <img id="day" class="dayNight" src="./images/dia.png">
-                <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+            <div class="container">
+                <h2> Options Panel</h2>
+                </br>
+                <p>You can change the appereance of the web site here.</p>
+            </div>
+            <div class="container">
+                <p>Change to Light or Darkmode:</p>
+                </br>
+                <div id="bdark" class="button">
+                    <img id="day" class="dayNight" src="./images/dia.png">
+                    <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+                </div>
+            </div>
+            <div class="container">
+                <p>Usuario:&nbsp;</p>
+                <input id="userImput" type="text" placeholder="Write your name">
             </div>
             <div id="optClose" class="button" class="close">
                 <p>Save changes</p>
@@ -64,30 +84,35 @@
 
     <!-- Main Part of Body -->
     <main>
-
-        <h2 style="font-size:xx-large">Welcome!</h2>
-        <h2>To the best place to ride MTB in Málaga</h2>
+        <h2 class="subTitle">The best place to ride MTB in Málaga</h2>
         </br>
         <hr>
         </br>
-        <section style="display: flex; flex-direction: row;">
-            <article>
+        <section class="textSection">
+            <article class="textSectionContent">
                 <h2>Welcome to Málaga!</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis harum ea reprehenderit hic
-                    dignissimos totam dolor eos nulla et commodi quis praesentium cumque animi eius sit assumenda,
-                    exercitationem deserunt!</p>
+                <p>
+                    Immerse yourself in this Mediterranean riding paradise that awaits your exploration.<br> 
+                    Whether you seek relaxation or adventure, Málaga's coast promises an unforgettable experience.
+                </p>
             </article>
-            <article>
+            <div style="width:10vw; height:3vh;"></div>
+            <article class="textSectionContent">
                 <h2>About Us.</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis harum ea reprehenderit hic
-                    dignissimos totam dolor eos nulla et commodi quis praesentium cumque animi eius sit assumenda,
-                    exercitationem deserunt!</p>
-                <p>AAAAAAAAAAAAAAAAAAA</p>
+                <p>
+                    Introducing the "Joyriders"!<br>
+                    A dynamic bike riding squad driven by sheer passion and boundless fun.<br>
+                    Our close-knit team of enthusiasts embraces exploring scenic landscapes, and experiencing the thrill of cycling together.<br>
+                    Join us as we ride towards endless adventures!
+                </p>
             </article>
         </section>
 
-
     </main>
+
+    <div class="user">
+        <p id="userName"></p>
+    </div>    
     <!-- Footer -->
     <footer class="stripps">
         <div class="footerContainer">
@@ -95,8 +120,13 @@
             <p>In Cooperation with: DirtScavengers</p>
         </div>
         <div class="footerContainer">
-            <a target="_blank" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="color:magenta">Instagram</a>
-            <a target="_blank" href="https://www.youtube.com/channel/UCftvCYOq2TvZc4959ns0SmA" style="color:red">Youtube</a>
+            <a target="_blank" href="https://www.instagram.com/dirt_scavengers/?hl=com"
+                style="color:magenta">Instagram</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCftvCYOq2TvZc4959ns0SmA"
+                style="color:red">Youtube</a>
+        </div>
+        <div class="footerContainer">
+            <a target="_blank" href="https://kmaxk9.github.io/Publico_GH/General/ejercicio_xml/london.xml">XML</a>
         </div>
 
     </footer>

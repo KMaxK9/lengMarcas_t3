@@ -28,6 +28,7 @@ infClose.onclick = function () {
 }
 optClose.onclick = function () {
     optModal.style.display = "none";
+    changeName();
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -85,11 +86,16 @@ function setLightMode() {
     let iconoNoche = document.getElementById("night").style.display = "none";
     document.getElementById("imgDay").style.display = "flex";
     document.getElementById("imgNight").style.display = "none";
+    document.getElementById("banner").style.backgroundColor = "gray";
     var x = document.getElementsByClassName("modalContent");
+    // var y = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.backgroundColor = "white";
     } // for
+    /* for (i = 0; i < y.length; i++) {
+         y[i].style.backgroundColor = "gray";
+     } // for*/
     console.log("day");
 }
 
@@ -101,10 +107,40 @@ function setDarkmode() {
     let iconoNoche = document.getElementById("night").style.display = "block";
     document.getElementById("imgDay").style.display = "none";
     document.getElementById("imgNight").style.display = "flex";
+    document.getElementById("banner").style.backgroundColor = "rgb(66, 66, 66)";
     var x = document.getElementsByClassName("modalContent");
+    //var y = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.backgroundColor = "rgb(66, 66, 66)";
     } // for
+    /* for (i = 0; i < y.length; i++) {
+         y[i].style.backgroundColor = "rgb(66, 66, 66)";
+     } // for*/
     console.log("night");
 }
+
+function storeName() {
+    var name = document.getElementById('userImput').value;
+    sessionStorage.setItem('user', name);
+}
+
+
+function changeName() {
+    var name = document.getElementById('userImput').value;
+    if (!name) {
+        document.getElementById('userName').textContent = "Not Logged in";
+    } else {
+        document.getElementById('userName').textContent = name;
+    }
+    storeName();
+}
+
+window.addEventListener('load', function () {
+    let name = sessionStorage.getItem('user');
+    if (name) {
+        document.getElementById('userName').textContent = name;
+    } else {
+        document.getElementById('userName').textContent = "Not Logged in";
+    }
+});
