@@ -1,17 +1,44 @@
-/**
- * Calls an Alert with the information of the student.
- */
-function callAlert() {
-    alert("Jesssyl Maximilian Kögler.\n1º DAM.\nTema: Parque Bicicleta + Merch Shop.\nTema Alternativo: Aún por pensar.");
-} // function
-
-/**
- * Enable DarkMode in Menu.
- */
+//Enable DarkMode in Menu.
 const bdark = document.querySelector('#bdark');
 const body = document.querySelector('body');
 
+// Get the modal
+var infModal = document.getElementById("infModal");
+var optModal = document.getElementById("optModal");
+// Get the button that opens the modal
+var infBtn = document.getElementById("infBtn");
+var optBtn = document.getElementById("optBtn");
+// Get the <span> element that closes the modal
+var infClose = document.getElementById("infClose");
+var optClose = document.getElementById("optClose");
+
 load();
+
+// When the user clicks the button, open the modal 
+infBtn.onclick = function () {
+    infModal.style.display = "block";
+}
+optBtn.onclick = function () {
+    optModal.style.display = "block";
+}
+
+// When the user clicks on (x), close the modal
+infClose.onclick = function () {
+    infModal.style.display = "none";
+}
+optClose.onclick = function () {
+    optModal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == infModal) {
+        infModal.style.display = "none";
+    }
+    if (event.target == optModal) {
+        optModal.style.display = "none";
+    }
+}
 
 /**
  * EventListener for when clicked the element.
@@ -58,6 +85,11 @@ function setLightMode() {
     let iconoNoche = document.getElementById("night").style.display = "none";
     document.getElementById("imgDay").style.display = "flex";
     document.getElementById("imgNight").style.display = "none";
+    var x = document.getElementsByClassName("modalContent");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "white";
+    } // for
     console.log("day");
 }
 
@@ -69,6 +101,10 @@ function setDarkmode() {
     let iconoNoche = document.getElementById("night").style.display = "block";
     document.getElementById("imgDay").style.display = "none";
     document.getElementById("imgNight").style.display = "flex";
+    var x = document.getElementsByClassName("modalContent");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.backgroundColor = "rgb(66, 66, 66)";
+    } // for
     console.log("night");
 }
-

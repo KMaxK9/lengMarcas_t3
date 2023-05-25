@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>DirtScavengers</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -17,7 +17,7 @@
         <h1 id="title">DirtScavengers BikePark</h1>
     </div>
     <!-- Banner Menu -->
-    <header id="banner">
+    <header id="banner" class="stripps">
         <a class="button" href="./index.html">
             <p>HOME</p>
         </a>
@@ -27,34 +27,76 @@
         <a class="button" href="#">
             <p>SHOP</p>
         </a>
-        <div class="button" onclick="callAlert()">
-            <p>INFO</p>
+        <div class="button" id="infBtn">
+            <img class="buttonImg" src="./images/info.png">
         </div>
-        <div id="bdark" class="button">
-            <img id="day" class="dayNight" src="./images/dia.png">
-            <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+        <div class="button" id="optBtn">
+            <img class="buttonImg" src="./images/gears.png">
         </div>
     </header>
+
+    <!-- Modal -->
+    <div id="infModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <h2>Modal</h2>
+            <p>Jesssyl Maximilian Kögler.\n1º DAM.\nTema: Parque Bicicleta + Merch Shop.</p>
+            <div id="infClose" class="button" class="close">
+                <p>Save changes</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="optModal" class="modal">
+        <!-- Modal content -->
+        <div class="modalContent">
+            <h2> Options Panel</h2>
+            <p>You can change the appereance of the web site here.</p>
+            <div id="bdark" class="button">
+                <img id="day" class="dayNight" src="./images/dia.png">
+                <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+            </div>
+            <div id="optClose" class="button" class="close">
+                <p>Save changes</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Main Part of Body -->
     <main>
 
-        <h2>Welcome!</h2>
+        <h2 style="font-size:xx-large">Welcome!</h2>
         <h2>To the best place to ride MTB in Málaga</h2>
         </br>
         <hr>
         </br>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis harum ea reprehenderit hic dignissimos totam dolor eos nulla et commodi quis praesentium cumque animi eius sit assumenda, exercitationem deserunt!</p>
+        <section style="display: flex; flex-direction: row;">
+            <article>
+                <h2>Welcome to Málaga!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis harum ea reprehenderit hic
+                    dignissimos totam dolor eos nulla et commodi quis praesentium cumque animi eius sit assumenda,
+                    exercitationem deserunt!</p>
+            </article>
+            <article>
+                <h2>About Us.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque blanditiis harum ea reprehenderit hic
+                    dignissimos totam dolor eos nulla et commodi quis praesentium cumque animi eius sit assumenda,
+                    exercitationem deserunt!</p>
+                <p>AAAAAAAAAAAAAAAAAAA</p>
+            </article>
+        </section>
+
 
     </main>
     <!-- Footer -->
-    <footer>
+    <footer class="stripps">
         <div class="footerContainer">
             <p>Page created by: Jessyl Maximilian Kögler</p>
             <p>In Cooperation with: DirtScavengers</p>
         </div>
         <div class="footerContainer">
-            <a href="https://www.instagram.com/dirt_scavengers/?hl=com" style="color:magenta">Instagram</a>
-            <a href="https://www.youtube.com/channel/UCftvCYOq2TvZc4959ns0SmA" style="color:red">Youtube</a>
+            <a target="_blank" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="color:magenta">Instagram</a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCftvCYOq2TvZc4959ns0SmA" style="color:red">Youtube</a>
         </div>
 
     </footer>
