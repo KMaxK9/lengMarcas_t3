@@ -11,6 +11,9 @@ var optBtn = document.getElementById("optBtn");
 // Get the <span> element that closes the modal
 var infClose = document.getElementById("infClose");
 var optClose = document.getElementById("optClose");
+// Gets the previus color.
+var previousColor = sessionStorage.getItem('color'); 
+
 
 load();
 
@@ -29,6 +32,7 @@ infClose.onclick = function () {
 optClose.onclick = function () {
     optModal.style.display = "none";
     changeName();
+    changeColor(1);
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -59,6 +63,7 @@ bdark.addEventListener('click', e => {
  * Function that loads when the page is refreshed or entered.
  */
 function load() {
+    // Darkmode
     const darkmode = localStorage.getItem('darkmode');
     if (!darkmode) {
         store('false');
@@ -68,6 +73,21 @@ function load() {
     } else if (darkmode) {
         setLightMode();
     } // if / else
+
+    // User name
+    let name = sessionStorage.getItem('user');
+    if (name) {
+        document.getElementById('userName').textContent = name;
+    } else {
+        document.getElementById('userName').textContent = "Not Logged in";
+    }
+    // Color
+    let color = sessionStorage.getItem('color');
+    if (color) {
+        changeColor(2);
+    } else {
+        changeColor(0);
+    }
 }
 
 /**
@@ -82,20 +102,16 @@ function store(value) {
  * Funtion that changes to Light mode. (changes image).
  */
 function setLightMode() {
-    let iconoDia = document.getElementById("day").style.display = "block";
-    let iconoNoche = document.getElementById("night").style.display = "none";
+    document.getElementById("day").style.display = "block";
+    document.getElementById("night").style.display = "none";
     document.getElementById("imgDay").style.display = "flex";
     document.getElementById("imgNight").style.display = "none";
-    document.getElementById("banner").style.backgroundColor = "gray";
+    document.getElementById("optContainer").style.backgroundColor = "rgb(200, 200, 200)";
     var x = document.getElementsByClassName("modalContent");
-    // var y = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.backgroundColor = "white";
     } // for
-    /* for (i = 0; i < y.length; i++) {
-         y[i].style.backgroundColor = "gray";
-     } // for*/
     console.log("day");
 }
 
@@ -103,29 +119,34 @@ function setLightMode() {
  * Funtion that changes to Dark mode. (changes image).
  */
 function setDarkmode() {
-    let iconoDia = document.getElementById("day").style.display = "none";
-    let iconoNoche = document.getElementById("night").style.display = "block";
+    document.getElementById("day").style.display = "none";
+    document.getElementById("night").style.display = "block";
     document.getElementById("imgDay").style.display = "none";
     document.getElementById("imgNight").style.display = "flex";
-    document.getElementById("banner").style.backgroundColor = "rgb(66, 66, 66)";
+    document.getElementById("optContainer").style.backgroundColor = "rgb(50, 50, 50)";
     var x = document.getElementsByClassName("modalContent");
-    //var y = document.getElementsByClassName("button");
     var i;
     for (i = 0; i < x.length; i++) {
         x[i].style.backgroundColor = "rgb(66, 66, 66)";
     } // for
-    /* for (i = 0; i < y.length; i++) {
-         y[i].style.backgroundColor = "rgb(66, 66, 66)";
-     } // for*/
     console.log("night");
 }
 
+/**
+ * Function that stores the inserted name.
+ */
 function storeName() {
     var name = document.getElementById('userImput').value;
     sessionStorage.setItem('user', name);
 }
 
+function storeColor(color) {
+    sessionStorage.setItem('color', color);
+}
 
+/**
+ * Function that changes the inserted name.
+ */
 function changeName() {
     var name = document.getElementById('userImput').value;
     if (!name) {
@@ -136,11 +157,21 @@ function changeName() {
     storeName();
 }
 
-window.addEventListener('load', function () {
-    let name = sessionStorage.getItem('user');
-    if (name) {
-        document.getElementById('userName').textContent = name;
+function changeColor(x) {
+    var color = document.getElementById('userColor');
+    if (x == 1) {
+        console.log("1");
+        console.log('Chosen color: ' + color.value);
+        document.getElementById("user").style.backgroundColor = color.value;
+        color = color.value;
+        previousColor = color.value;
+    } else if(x == 0) {
+        console.log("0");
+        color = document.getElementById("user").style.backgroundColor = "#808080";
     } else {
-        document.getElementById('userName').textContent = "Not Logged in";
+        console.log("2");
+        color = previousColor;
+        document.getElementById("user").style.backgroundColor = previousColor;
     }
-});
+    storeColor(color);
+}

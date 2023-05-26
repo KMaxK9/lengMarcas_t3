@@ -187,12 +187,19 @@ a :visited {
     margin: 2vh 3vw;
 }
 
-.user {
+#optContainer {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(200, 200, 200);
+    margin:1vh;
+}
+
+#user {
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(128, 128, 128, 0.5);
-    padding: 2vw;
+    background-color: #808080;
+    padding: 1vw;
 }
 
 /* Footer element */
@@ -268,6 +275,10 @@ footer p {
         width: 80%;
     }
 
+    #user {
+        padding: 2vh;
+    }
+
     .close {
         font-size: medium;
     }
@@ -309,7 +320,11 @@ footer p {
 
     .modalContent {
         width: 80%;
-        height: 80%;
+        height: 92%;
+    }
+
+    #user {
+        padding: 2vw;
     }
 
     footer {

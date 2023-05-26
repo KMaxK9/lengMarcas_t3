@@ -72,10 +72,18 @@
                     <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
                 </div>
             </div>
+            <div id="optContainer">
             <div class="container">
-                <p>Usuario:&nbsp;</p>
-                <input id="userImput" type="text" placeholder="Write your name">
+                <p>User:&nbsp;</p>
+                <input id="userImput" type="text" placeholder="User Name">
+                <p>Password:&nbsp;</p>
+                <input type=password name=passwd placeholder="Password">
             </div>
+            <div class="container">
+                <p>Color:&nbsp;</p>
+                <input type="color" id="userColor" value="#808080"/>
+            </div>
+        </div>
             <div id="optClose" class="button" class="close">
                 <p>Save changes</p>
             </div>
@@ -110,7 +118,7 @@
 
     </main>
 
-    <div class="user">
+    <div id="user">
         <p id="userName"></p>
     </div>    
     <!-- Footer -->
