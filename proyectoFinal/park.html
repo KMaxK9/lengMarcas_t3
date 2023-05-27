@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
+    <title>DirtScavengers - BikePark</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <!-- Banner Image -->
     <div id="imgContainer">
-        <img src="./images/main.jpg" id="imgDay" class="bannerImg">
-        <img src="./images/mainRainy.jpg" id="imgNight" class="bannerImg" style="display:none">
-        <h1 id="title">DirtScavengers BikePark</h1>
+        <img src="./images/pictures/berm.jpg" id="imgDay" class="bannerImg" style="object-position: 50% 60%;">
+        <img src="./images/pictures/berm.jpg" id="imgNight" class="bannerImg"
+            style="display:none; object-position: 50% 60%;">
+        <h1 id="title">The Park</h1>
     </div>
     <!-- Banner Menu -->
     <header id="banner" class="stripps">
@@ -24,14 +25,14 @@
         <a class="button" href="./park.html">
             <p>PARK</p>
         </a>
-        <a class="button" href="#">
+        <a class="button" href="./shop.html">
             <p>SHOP</p>
         </a>
         <div class="button" id="infBtn">
-            <img class="buttonImg" src="./images/info.png">
+            <img class="buttonImg" src="./images/menuElements/info.png">
         </div>
         <div class="button" id="optBtn">
-            <img class="buttonImg" src="./images/gears.png">
+            <img class="buttonImg" src="./images/menuElements/gears.png">
         </div>
     </header>
 
@@ -67,8 +68,8 @@
                 <p>Change to Light or Darkmode:</p>
                 </br>
                 <div id="bdark" class="button">
-                    <img id="day" class="dayNight" src="./images/dia.png">
-                    <img id="night" class="dayNight" src="./images/noche.png" style="display:none">
+                    <img id="day" class="dayNight" src="./images/menuElements/dia.png">
+                    <img id="night" class="dayNight" src="./images/menuElements/noche.png" style="display:none">
                 </div>
             </div>
             <div id="optContainer">
@@ -80,7 +81,7 @@
                 </div>
                 <div class="container">
                     <p>Color:&nbsp;</p>
-                    <input type="color" id="userColor" />
+                    <input type="color" id="userColor" value="#808080" />
                 </div>
             </div>
             <div id="optClose" class="button" class="close">
@@ -89,6 +90,84 @@
         </div>
     </div>
 
+    <!-- Main Part of Body -->
+    <main>
+        <h2 class="subTitle">The best place to ride MTB in Málaga</h2>
+        </br>
+        <hr>
+        </br>
+        <!-- Container 1 -->
+        <section class="textSection">
+            <article class="textSectionContent" style="margin: 5vh 0">
+                <h2>Welcome to our Backyard!</h2>
+                <p>
+                    Come arround and get yourself a new experience of riding your Mountain Bike.<br>
+                    Bring your bmx, dirt jumper, hardtail, trail, enduro or even your downhill bike, here you can ride
+                    however you want!<br>
+                    You can come alone, with friends or you can ride with us, the locals.
+                </p>
+            </article>
+
+        </section>
+        </br>
+        <hr>
+        </br>
+        <!-- Container 2 -->
+        <section class="textSection">
+            <article>
+                <img src="./images/pictures/bigJump.jpg" class="mainImg" style="margin-right: 0;">
+            </article>
+            <article class="textSectionContent" style="margin-bottom:2vh">
+                <h2>Join the Fun</h2>
+                <p>
+                    Want to come to ride or have a visit?<br>
+                    Just write us a private mesage on Instaram.<br>
+                </p>
+                <a class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="margin: 3vh;">
+                    <p>RESERVE</p>
+                </a>
+            </article>
+        </section>
+        <hr>
+        <!-- Container 3 -->
+        <section class="textSection">
+            <article class="textSectionContent" style="margin-top:2vh">
+                <h2>Want to help?</h2>
+                <p>
+                    Want to help us build and plan new lines and features?<br>
+                    Contact via Instagram with your ideas.<br>
+                </p>
+                <a class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="margin: 3vh;">
+                    <p>CONTACT</p>
+                </a>
+            </article>
+            <article>
+                <img src="./images/pictures/bigBerm.jpg" class="mainImg" style="margin-left: 0;">
+            </article>
+        </section>
+        <hr>
+        <!-- Container 4 -->
+        <section>
+            <article style="display:flex; justify-content: center;">
+                <img src="./images/pictures/strip.jpg" class="mainBannerImg">
+            </article>
+        </section>
+        <hr>
+        <!-- Container 5 -->
+        <section class="textSection">
+            <article>
+                <img src="./images/pictures/map.jpg"  id="map" class="mainImg" style="margin-right: 0;">
+            </article>
+            <article class="textSectionContent" style="margin-bottom:2vh">
+                <h2>New Plans!</h2>
+                <p>
+                    Have a look at the new Plans for this year.<br>
+                    Will we be able to do it? who knows, but with your help it would be archivable!<br>
+                </p>
+            </article>
+        </section>
+        <hr>
+    </main>
 
     <div id="user">
         <p id="userName"></p>
