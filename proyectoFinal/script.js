@@ -12,23 +12,25 @@ var optBtn = document.getElementById("optBtn");
 var infClose = document.getElementById("infClose");
 var optClose = document.getElementById("optClose");
 // Gets the previus color.
-var previousColor = sessionStorage.getItem('color'); 
+var previousColor = sessionStorage.getItem('color');
 
 
 load();
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal. 
 infBtn.onclick = function () {
     infModal.style.display = "block";
 }
+// When the user clicks the button, open the modal.
 optBtn.onclick = function () {
     optModal.style.display = "block";
 }
 
-// When the user clicks on (x), close the modal
+// When the user clicks on (ok), close the modal.
 infClose.onclick = function () {
     infModal.style.display = "none";
 }
+// When the user clicks on (save changes), close the modal.
 optClose.onclick = function () {
     optModal.style.display = "none";
     changeName();
@@ -140,6 +142,10 @@ function storeName() {
     sessionStorage.setItem('user', name);
 }
 
+/**
+ * Function that stores the color in sessionStorage.
+ * @param {} color The given color by he color imput.
+ */
 function storeColor(color) {
     sessionStorage.setItem('color', color);
 }
@@ -157,6 +163,10 @@ function changeName() {
     storeName();
 }
 
+/**
+ * Function that changes the color dependeding on what action the user has taken.
+ * @param {*} x Numeric value (0,1,2) 1 changes color on given value. 0 sets it to default. 2 sets it to the one given in sessionStorage.
+ */
 function changeColor(x) {
     var color = document.getElementById('userColor');
     if (x == 1) {
@@ -165,7 +175,7 @@ function changeColor(x) {
         document.getElementById("user").style.backgroundColor = color.value;
         color = color.value;
         previousColor = color.value;
-    } else if(x == 0) {
+    } else if (x == 0) {
         console.log("0");
         color = document.getElementById("user").style.backgroundColor = "#808080";
     } else {

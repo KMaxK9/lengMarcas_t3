@@ -36,7 +36,7 @@
         </div>
     </header>
 
-    <!-- Modal -->
+    <!-- Content Modal -->
     <div id="infModal" class="modal">
         <!-- Modal content -->
         <div class="modalContent">
@@ -45,7 +45,20 @@
                 </br>
                 <p>Jesssyl Maximilian Kögler.<br>1º DAM.<br>Tema: Parque Bicicleta + Merch Shop.</p>
                 </br>
-                <p>El archivo XML se encuentra en el footer</p>
+                <p>
+                    - El modal está en las dos páginas principales (home y park), no está la de shop ya que es
+                    experimental.<br>
+                    - Páginas: Home, Park, Shop, "xml", "ajustes"(Modal).<br>
+                    - LocalStorage: Darkmode(modoDiaNoche).<br>
+                    - SessionStorage: Nombre Usuario y color establecido.<br>
+                    - El archivo XML se encuentra en el footer de todas las páginas.<br>
+                    - El Javascript se utiliza para leer el nombre y el color en los ajustes. También se utiliza para
+                    modificar (Darkmode, colorUsuario).<br>
+                    - En la consola se muestra si es modo "dia" o "noche", el color elegido y también muestra una
+                    variable utilizada una función.<br>
+                    - Elementos de entrada de dato: Nombre usuario, contraseña y color.<br>
+                    - Me muestra en la esquina inferior izquierda junto al color en todas las páginas.
+                </p>
             </div>
             <div class="container">
                 <div id="infClose" class="button" class="close">
@@ -55,7 +68,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- Options Modal -->
     <div id="optModal" class="modal">
         <!-- Modal content -->
         <div class="modalContent">
@@ -123,7 +136,7 @@
         <!-- Container 2 -->
         <section class="textSection">
             <article>
-                <img src="./images/pictures/helmet.jpg" class="mainImg" style="margin-right: 0;">
+                <img src="./images/pictures/group.jpg" class="mainImg" style="margin-right: 0;">
             </article>
             <article class="textSectionContent" style="margin-bottom:2vh">
                 <h2>Join the Team</h2>
@@ -131,7 +144,8 @@
                     From street to park, and to trails.<br>
                     You can join us, whatever you do!<br>
                 </p>
-                <a class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="margin: 3vh;">
+                <a target="_blank" class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com"
+                    style="margin: 3vh;">
                     <p>CONTACT</p>
                 </a>
             </article>
@@ -145,7 +159,8 @@
                     We would we very if you contacted us.<br>
                     Just write us a private mesage on Instaram.<br>
                 </p>
-                <a class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com" style="margin: 3vh;">
+                <a target="_blank" class="mainButton" href="https://www.instagram.com/dirt_scavengers/?hl=com"
+                    style="margin: 3vh;">
                     <p>CONTACT</p>
                 </a>
             </article>
@@ -172,7 +187,7 @@
                 style="color:red">Youtube</a>
         </div>
         <div class="footerContainer">
-            <a target="_blank" href="https://kmaxk9.github.io/Publico_GH/General/ejercicio_xml/london.xml">XML</a>
+            <a target="_blank" href="./xml/london.xml">XML</a>
         </div>
 
     </footer>
