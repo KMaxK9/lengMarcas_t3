@@ -24,11 +24,15 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 /* Content of sections full of text in main */
 .textSectionContent {
+    display:flex;
+    flex-direction: column;
     width: 45vw;
+    align-items: center;
 }
 
 /* a element */
@@ -78,6 +82,16 @@ a :visited {
     height: 2.6vh;
 }
 
+.mainButton {
+    display: flex;
+    background-color: green;
+    padding: 1.5vh 5vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.7vw;
+    width: 5vw;
+}
+
 /* ID from the button for darkmode toggle */
 #bdark {
     width: 10vw;
@@ -113,6 +127,14 @@ a :visited {
 #imgContainer {
     width: 100%;
     position: relative;
+}
+
+/* Images from main */
+.mainImg {
+    height: 50vh;
+    width: auto;
+    margin: 2vw;
+    border: 2px solid white;
 }
 
 /* Title of the Page */
@@ -191,7 +213,7 @@ a :visited {
     display: flex;
     flex-direction: row;
     background-color: rgb(200, 200, 200);
-    margin:1vh;
+    margin: 1vh;
 }
 
 #user {
@@ -254,6 +276,17 @@ footer p {
 
     .buttonImg {
         height: 2.5vh;
+    }
+
+    .mainImg {
+        height: auto;
+        width: 100%;
+        margin: 2vh 0;
+    }
+
+    .mainButton {
+        padding: 1.5vh 14vw;
+        border-radius: 2vh;
     }
 
     #bdark {
